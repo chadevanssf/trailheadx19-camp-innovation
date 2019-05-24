@@ -1,4 +1,5 @@
 # trailheadx19-camp-innovation
+
 TrailheaDX 2019 Camp Innovation
 
 Assets to support the Camp Innovation hands on portion.
@@ -7,8 +8,12 @@ Assets to support the Camp Innovation hands on portion.
 
 * Get SFDX CLI
   * https://developer.salesforce.com/tools/sfdxcli
+* Get a Developer Edition Org
+  * https://developer.salesforce.com/signup
+  * Set up My Domain and Communities, and create a new Community with the blank template and an attrative theme
 * Mobile
   * install the "Camp Innovation.mobileconfig" file on your mobile device
+    * modify to link to the community that was created previously
     * open in safari on ios
     * request desktop site
     * download, accept the profile
@@ -21,14 +26,17 @@ sfdx force:project:create -n campinnovation
 ```
 * Make the scripts runnable
 ``` sh
-chmod 700 uploadTempConv.sh
+chmod 700 uploadCarousel.sh
 chmod 700 uploadTodo.sh
+chmod 700 uploadTempConv.sh
 chmod 700 deleteLWC.sh
 ```
 * Register DevEd with SFDX CLI
 ``` sh
 sfdx force:auth:web:login -a tdx19
 ```
+* Load the website
+  * https://camp-innovation-trailheadx.herokuapp.com/
 
 ## Deploy
 
@@ -45,3 +53,8 @@ sfdx force:auth:web:login -a tdx19
 * Open Community Builder and remove the component, and re-publish
 * Run script file to delete existing deployments
   * ./deleteLWC.sh
+  * https://github.com/chadevanssf/trailheadx19-camp-innovation/blob/master/deleteLWC.sh
+
+## Demos
+
+Want to demo the components? Load up this page: https://camp-innovation-trailheadx.herokuapp.com/. 
